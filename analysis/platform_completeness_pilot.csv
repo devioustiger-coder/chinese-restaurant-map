@@ -1,0 +1,8 @@
+source,city,visible_results,excluded,in_scope_sample,osm_present,presence_rate,taxonomy_only_matches,notes
+Yelp,Bellevue,10,1,9,5,0.556,2,"Four missing; Hakka House was outside Bellevue."
+Yelp,Seattle,10,0,10,10,1.000,0,"All ten matched after name normalization."
+Yelp,San Jose,10,2,8,4,0.500,0,"Excluded a Santa Clara location and one category-ambiguous result."
+Google Maps,Bellevue,7,0,7,5,0.714,1,"Master Bing and Supreme Dumplings absent; Din Tai Fung taxonomy-only."
+Google Maps,Seattle,7,0,7,5,0.714,0,"Honey Court and Blue Willow absent."
+Google Maps,San Jose,7,0,7,3,0.429,0,"Special Noodle, Yummy Kitchen, Golden House, and China Chen absent."
+Overall pilot,All three,51,3,48,32,0.667,3,"Illustrative ranked sample only; duplicates and nonrandom ranking mean this is not a population-wide completeness estimate."
