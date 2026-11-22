@@ -35,6 +35,18 @@ An exploratory four-predictor model explains 58.7% of observed variance (adjuste
 
 Bellevue's unusually high per-capita rate is a real descriptive observation in this dataset. It is not, by itself, evidence that income, immigration, or population density caused the difference.
 
+## Three-city case-study direction
+
+The city-level relationship remains the quantitative baseline. Bellevue, Seattle, and San Jose are then used as contrasting cases to investigate possible mechanisms and social consequences. The framework deliberately separates measured project results from external context and questions that still require new evidence.
+
+| City | Commercial conditions | Mobility | Inequality | Cultural belonging |
+|---|---|---|---|---|
+| Bellevue | Test whether rents, shopping centers, permitting, tenant improvements, and business openings/closures help explain the high sampled rate. | Model access to downtown and BelRed from residential and employment areas; include transit, parking, and work trips. | Compare affordability, car access, disability/language access, and displacement risk. | Ask how restaurants function as gathering spaces for a multicultural community and who feels included or excluded. |
+| Seattle | Study legacy businesses, rents, vacancies, and the regional role of the Chinatown–International District. | Estimate regional transit/driving catchments and customer origins instead of using nearby residents as demand. | Examine historic underinvestment, displacement, safety, affordability, and access. | Test the city's description of the CID as a cultural hub through interviews with residents, workers, owners, and visitors. |
+| San Jose | Study malls, commercial corridors, permitting, rents, and immigrant business networks; first strengthen restaurant coverage with county records. | Compare transit and driving access across a large, dispersed city. | Compare access by income, car availability, neighborhood, and language without treating all AAPI communities as one group. | Examine how restaurants and commercial corridors connect to immigrant histories and community life. |
+
+The full measurement plan is in [`analysis/case_study_framework.md`](analysis/case_study_framework.md).
+
 ## Feasibility of the four questions
 
 | Question | Current feasibility | What is still needed |
