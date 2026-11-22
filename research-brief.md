@@ -1,6 +1,6 @@
 # Research brief: Chinese restaurant availability across selected West Coast cities
 
-Updated November 21, 2026
+Updated November 22, 2026
 
 ## Research focus
 
@@ -57,7 +57,29 @@ Across 5,813 classified OSM records:
 - website completeness: 46.0%;
 - name completeness: 98.8%.
 
-The cuisine-tag-only sensitivity test indicates that the main association is not created by the small name-keyword group. Yelp and Google Places were not used for wholesale validation because their APIs require credentials and billing or plan access, and platform terms constrain storage and analysis. A future study should use a licensed source or a small, documented manual match sample rather than scraping.
+The cuisine-tag-only sensitivity test indicates that the main association is not created by the small name-keyword group. The project now also includes a small, documented cross-platform audit rather than wholesale scraping.
+
+### Cross-platform completeness pilot
+
+On November 22, 2026, the first visible ranked results for Chinese-restaurant searches in Bellevue, Seattle, and San Jose were compared with the current OSM sample. Results outside the target city or with an ambiguous/non-Chinese category were excluded before matching.
+
+| Source | City | In-scope visible results | Present in OSM | Presence rate | Taxonomy-only matches |
+|---|---|---:|---:|---:|---:|
+| Yelp | Bellevue | 9 | 5 | 55.6% | 2 |
+| Yelp | Seattle | 10 | 10 | 100.0% | 0 |
+| Yelp | San Jose | 8 | 4 | 50.0% | 0 |
+| Google Maps | Bellevue | 7 | 5 | 71.4% | 1 |
+| Google Maps | Seattle | 7 | 5 | 71.4% | 0 |
+| Google Maps | San Jose | 7 | 3 | 42.9% | 0 |
+| Combined visible-result pilot | All three | 48 | 32 | 66.7% | 3 |
+
+The combined number is an illustrative audit result, not an estimate of total OSM completeness. Search rankings are nonrandom, the same business can appear on both platforms, and Yelp results are not guaranteed to remain within the named city. It nevertheless identifies concrete undercoverage and taxonomy problems that affect the three case studies.
+
+- Bellevue examples missing from the OSM sample included Xiang House and the Bellevue location of Supreme Dumplings. Din Tai Fung and Facing East existed in OSM but were excluded from the strict Chinese count because their cuisine tag was Taiwanese.
+- Seattle performed best in the Yelp pilot, but Google surfaced Blue Willow and Honey Court, which were absent from the OSM sample.
+- San Jose showed the clearest undercoverage. Special Noodle, Golden House Chinese Restaurant, New Sam Kee Restaurant, China Chen, and Yummy Kitchen were independently found in Santa Clara County's food-facility inventory but were absent from the OSM sample.
+
+King County and Santa Clara County food-facility records were used to confirm selected missing candidates. These official registries are good evidence that an establishment exists or recently operated, but their business names may differ from customer-facing names and they do not classify cuisine. The detailed audit is in [`analysis/platform_completeness_pilot.csv`](analysis/platform_completeness_pilot.csv), and the source and terms assessment is in [`analysis/platform_source_assessment.md`](analysis/platform_source_assessment.md).
 
 ## Local context and inequality
 
@@ -83,6 +105,6 @@ The quantitative results are this project's original analysis. The points below 
 1. Keep the city-level demographic association as the baseline result.
 2. Expand to a stratified multi-region city sample before claiming national patterns.
 3. Add commercial context: retail space, rents, malls, job centers, transit, parking, and legacy business districts.
-4. Conduct a small validation sample using a licensed platform or local business-license source.
+4. Expand the validation pilot using Overture Maps Places and official food-facility registries; use Yelp and Google only for documented spot checks unless research permission or a suitable license is obtained.
 5. Add interviews or community-partner evidence about belonging, displacement, and access.
 6. Treat any AI ownership classification as a separate bias audit, never as verified ownership data.
