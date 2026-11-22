@@ -1,0 +1,262 @@
+{
+  "analysis_as_of": "2026-11-21",
+  "sample_size": 30,
+  "sample_design": "Top 15 incorporated Washington cities, top 10 incorporated California cities, and top 5 incorporated Oregon cities by 2024 ACS Asian-alone population; required comparison cities retained.",
+  "correlations": [
+    {
+      "x": "chinese_share",
+      "y": "chinese_per_100k",
+      "n": 30,
+      "pearson_r": 0.6757846893556445,
+      "pearson_p": 4.1642556903629425e-05,
+      "spearman_rho": 0.52880978865406,
+      "spearman_p": 0.0026615604365572143,
+      "slope": 80.14835233791996,
+      "intercept": 6.043762135729353,
+      "r_squared": 0.45668494636750495
+    },
+    {
+      "x": "asian_share",
+      "y": "chinese_per_100k",
+      "n": 30,
+      "pearson_r": 0.38753429832577047,
+      "pearson_p": 0.03435341640284455,
+      "spearman_rho": 0.2867630700778643,
+      "spearman_p": 0.12444064303422343,
+      "slope": 18.148629723411005,
+      "intercept": 6.651018145965877,
+      "r_squared": 0.15018283237884728
+    },
+    {
+      "x": "foreign_born_share",
+      "y": "chinese_per_100k",
+      "n": 30,
+      "pearson_r": 0.3156618409494425,
+      "pearson_p": 0.08927350490923908,
+      "spearman_rho": 0.22091212458286985,
+      "spearman_p": 0.24074183075197952,
+      "slope": 19.087369732914606,
+      "intercept": 5.478318731372443,
+      "r_squared": 0.09964239783159114
+    },
+    {
+      "x": "median_household_income",
+      "y": "chinese_per_100k",
+      "n": 30,
+      "pearson_r": 0.3293824098076007,
+      "pearson_p": 0.07549932618158,
+      "spearman_rho": 0.450055617352614,
+      "spearman_p": 0.01257879195299962,
+      "slope": 5.796875734436107e-05,
+      "intercept": 4.033954232034133,
+      "r_squared": 0.10849277189066221
+    },
+    {
+      "x": "population_density_sq_mi",
+      "y": "chinese_per_100k",
+      "n": 30,
+      "pearson_r": 0.421744726887552,
+      "pearson_p": 0.020269888365444556,
+      "spearman_rho": 0.15194660734149054,
+      "spearman_p": 0.42281175692313056,
+      "slope": 0.0010678318004131717,
+      "intercept": 5.228802331987432,
+      "r_squared": 0.17786861465745582
+    },
+    {
+      "x": "chinese_share",
+      "y": "chinese_high_confidence_per_100k",
+      "n": 30,
+      "pearson_r": 0.6880609925206196,
+      "pearson_p": 2.6446252976664154e-05,
+      "spearman_rho": 0.5630700778642936,
+      "spearman_p": 0.0011973909518797666,
+      "slope": 79.29521823853877,
+      "intercept": 5.737206534257239,
+      "r_squared": 0.4734279294284601
+    },
+    {
+      "x": "foreign_born_share",
+      "y": "chinese_share",
+      "n": 30,
+      "pearson_r": 0.7054394813075974,
+      "pearson_p": 1.3383264697374939e-05,
+      "spearman_rho": 0.7303670745272525,
+      "spearman_p": 4.611048916880061e-06,
+      "slope": 0.3596644494509324,
+      "intercept": -0.041539598357088474,
+      "r_squared": 0.49764486178753203
+    }
+  ],
+  "sensitivity": {
+    "chinese_share_vs_chinese_per_100k_without_bellevue": {
+      "x": "chinese_share",
+      "y": "chinese_per_100k",
+      "n": 29,
+      "pearson_r": 0.6363478203603783,
+      "pearson_p": 0.00020666101153839575,
+      "spearman_rho": 0.4812807881773397,
+      "spearman_p": 0.008212707805216645,
+      "slope": 64.2065285313468,
+      "intercept": 6.455948258053258,
+      "r_squared": 0.4049385484774043
+    },
+    "high_confidence_only": {
+      "x": "chinese_share",
+      "y": "chinese_high_confidence_per_100k",
+      "n": 30,
+      "pearson_r": 0.6880609925206196,
+      "pearson_p": 2.6446252976664154e-05,
+      "spearman_rho": 0.5630700778642936,
+      "spearman_p": 0.0011973909518797666,
+      "slope": 79.29521823853877,
+      "intercept": 5.737206534257239,
+      "r_squared": 0.4734279294284601
+    }
+  },
+  "exploratory_multivariable_model": {
+    "outcome": "chinese_per_100k",
+    "predictors": [
+      "chinese_share",
+      "foreign_born_share",
+      "log_median_household_income",
+      "log_population_density"
+    ],
+    "n": 30,
+    "r_squared": 0.5866381833920076,
+    "adjusted_r_squared": 0.5205002927347289,
+    "coefficients": [
+      {
+        "term": "Intercept",
+        "standardized_beta": 5.898059818321144e-16,
+        "hc3_se": 0.1396005321504008,
+        "t": 4.224955111178787e-15,
+        "p": 0.9999999999999967
+      },
+      {
+        "term": "chinese_share",
+        "standardized_beta": 1.1638538714109785,
+        "hc3_se": 0.3729313642156591,
+        "t": 3.120825929615145,
+        "p": 0.004508484658075522
+      },
+      {
+        "term": "foreign_born_share",
+        "standardized_beta": -0.2504749896150703,
+        "hc3_se": 0.12302731698224394,
+        "t": -2.035929871178288,
+        "p": 0.05248457522588124
+      },
+      {
+        "term": "log_median_household_income",
+        "standardized_beta": -0.4100626519475481,
+        "hc3_se": 0.3617985624240401,
+        "t": -1.1334004458175289,
+        "p": 0.2677987146199184
+      },
+      {
+        "term": "log_population_density",
+        "standardized_beta": 0.09297081372522509,
+        "hc3_se": 0.12264081660502084,
+        "t": 0.758073994440599,
+        "p": 0.45549394790458464
+      }
+    ],
+    "vif": {
+      "chinese_share": 4.122584373950462,
+      "foreign_born_share": 2.115112929744211,
+      "log_median_household_income": 3.732784306934414,
+      "log_population_density": 1.2687942280649485
+    },
+    "standardization": {
+      "outcome_mean": 10.895153741939913,
+      "outcome_sd": 7.234809568933021,
+      "predictor_means": {
+        "chinese_share": 0.06053014771602809,
+        "foreign_born_share": 0.2837915902695896,
+        "log_median_household_income": 11.628744390342582,
+        "log_population_density": 8.49081402627669
+      },
+      "predictor_sds": {
+        "chinese_share": 0.06100154768590882,
+        "foreign_born_share": 0.11964735526183544,
+        "log_median_household_income": 0.3238783047854743,
+        "log_population_density": 0.3812599493089219
+      }
+    },
+    "labels": [
+      "Los Angeles, CA",
+      "San Jose, CA",
+      "San Francisco, CA",
+      "San Diego, CA",
+      "Fremont, CA",
+      "Irvine, CA",
+      "Sacramento, CA",
+      "Fresno, CA",
+      "Sunnyvale, CA",
+      "Garden Grove, CA",
+      "Portland, OR",
+      "Hillsboro, OR",
+      "Beaverton, OR",
+      "Eugene, OR",
+      "Gresham, OR",
+      "Seattle, WA",
+      "Bellevue, WA",
+      "Kent, WA",
+      "Redmond, WA",
+      "Renton, WA",
+      "Sammamish, WA",
+      "Tacoma, WA",
+      "Kirkland, WA",
+      "Federal Way, WA",
+      "Everett, WA",
+      "Issaquah, WA",
+      "Vancouver, WA",
+      "Auburn, WA",
+      "Bothell, WA",
+      "Shoreline, WA"
+    ],
+    "note": "Exploratory OLS with HC3 robust standard errors; standardized coefficients; observational and non-causal."
+  },
+  "state_descriptives": [
+    {
+      "state": "CA",
+      "cities": 10,
+      "mean_chinese_per_100k": 11.894259317007684,
+      "median_chinese_per_100k": 9.228563015522576,
+      "mean_chinese_share": 0.09103784941046861,
+      "mean_foreign_born_share": 0.36582565698447767
+    },
+    {
+      "state": "OR",
+      "cities": 5,
+      "mean_chinese_per_100k": 11.730013798284968,
+      "median_chinese_per_100k": 13.363698626323146,
+      "mean_chinese_share": 0.01225730474759504,
+      "mean_foreign_born_share": 0.1520020540412334
+    },
+    {
+      "state": "WA",
+      "cities": 15,
+      "mean_chinese_per_100k": 9.950796673113052,
+      "median_chinese_per_100k": 8.704557091653866,
+      "mean_chinese_share": 0.05628262757587877,
+      "mean_foreign_born_share": 0.2730320578691165
+    }
+  ],
+  "osm_audit_overall": {
+    "records": 5813,
+    "duplicate_osm_type_id_rows": 0,
+    "cuisine_tag_share": 0.9430586616205058,
+    "name_keyword_share": 0.056941338379494236,
+    "address_completeness": 0.7725787029072768,
+    "website_completeness": 0.4601754687768794,
+    "name_completeness": 0.9884741097539996
+  },
+  "interpretation_guardrails": [
+    "Cities were selected for large Asian populations rather than sampled randomly.",
+    "OSM counts are lower-bound observations and platform coverage may differ by city.",
+    "The multivariable model is exploratory with only 30 cities and cannot establish causation.",
+    "Foreign-born share and Chinese population share overlap conceptually and statistically."
+  ]
+}
